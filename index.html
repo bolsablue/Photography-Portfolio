@@ -30,7 +30,7 @@
     </header>
 
     <section class="hero">
-      <video class="background-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
+      <video class="background-video" autoplay muted loop playsinline webkit-playsinline preload="auto" controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
         <source src="videos/background-video-clean.mp4" type="video/mp4" />
       </video>
     </section>
@@ -38,3 +38,11 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
+<script>
+  const video = document.querySelector(".background-video");
+  video.muted = true;
+  video.play().catch(() => {
+    console.log("Autoplay blocked on mobile");
+  });
+</script>
