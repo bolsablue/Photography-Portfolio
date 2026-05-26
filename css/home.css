@@ -19,6 +19,8 @@
   object-position: center center;
 
   display: block;
+
+  pointer-events: none;
 }
 
 /*    ^^BACKGROUND VIDEO^^    */
